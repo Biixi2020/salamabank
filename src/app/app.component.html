@@ -1,0 +1,31 @@
+
+<div class="container-fluid"> 
+
+    <div class="row">
+
+        <h2>Accessing Our Data Service</h2>
+    </div>
+
+  
+    <div class="row col-md-12" >
+
+                <div class="centered" *ngIf="isloading">
+                    <img src="../assets/Loader.gif" width="150" height="150"/>
+                </div>
+
+            <div class="col-md-2">
+
+                <h5>Library Catelog </h5>
+
+                <ul>
+                    <li><a [routerLink]="['books']">Books</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <router-outlet></router-outlet>
+            </div>
+     </div>
+
+    </div>
+
+

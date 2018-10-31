@@ -1,0 +1,50 @@
+     <div class="col-md-12">
+
+         <div class="centered" *ngIf="isloading">
+                    <img src="../assets/Loader.gif" width="150" height="150"/>
+         </div>
+
+     <div class="row justify-content-end">
+        <div class="col-md-2">
+
+            <select class="form-control"><option>All</option><option>Title</option><option>Author</option><option>Gendre</option><option>Published Year</option></select>
+
+        </div>
+
+        <div class="col-md-4">
+
+         <input class="form-control" type="text" placeholder="Key Word" (input)="OnValueChange($event.target.value)"/>
+
+        </div>
+
+        <div class="col-md-1">
+             <input type="submit" value="Search" class="btn btn-primary" (click)="OnAddData()"/>
+        </div>
+        
+    </div>
+
+    <div class="row">
+           
+            <table class="table table-sm table-striped" >
+
+                <thead class="thead-light">
+                <tr>
+                    <td>Links</td>
+                    <td>Title</td>
+                    <td>author</td>
+                    <td>Gendre</td>
+                    <td>Published Year</td>
+                </tr>
+                </thead>
+                <tr *ngFor="let book of books; let i = index">
+                    <td><a [routerLink]="['/books/id']">{{i}}</a></td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.gendre}}</td>
+                    <td>{{book.publishYear}}</td>
+                </tr>
+            </table>
+
+            </div>
+
+    </div>
