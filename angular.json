@@ -28,7 +28,7 @@
               "src/css-loader.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/jquery-2.2.4.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
